@@ -1,0 +1,863 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Millet Starving Student Hybrid Headphone Amp (12S_7) mod)"
+Date "2020-05-30"
+Rev "1"
+Comp "Modified for 12S_7 valves by Logistic on head-fi - Drafted by Simon Holywell"
+Comment1 "All capacitors are 63V minimum"
+Comment2 "All resistors are 0.25W (1/4W) metal or carbon film"
+Comment3 "IRF510 FETs must be mounted on heatsinks (recommend 2\")"
+Comment4 "Original circuit design: Pete Millet - http://pmillett.com/starving.htm"
+$EndDescr
+$Comp
+L Connector:Jack-DC J1
+U 1 1 5DE7A779
+P 1200 1000
+F 0 "J1" H 970 958 50  0000 R CNN
+F 1 "Power jack" H 970 1049 50  0000 R CNN
+F 2 "" H 1250 960 50  0001 C CNN
+F 3 "~" H 1250 960 50  0001 C CNN
+	1    1200 1000
+	1    0    0    1   
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5DE836ED
+P 1900 900
+F 0 "SW1" H 1900 1135 50  0000 C CNN
+F 1 "SW_SPST" H 1900 1044 50  0000 C CNN
+F 2 "" H 1900 900 50  0001 C CNN
+F 3 "~" H 1900 900 50  0001 C CNN
+	1    1900 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 900  1500 900 
+$Comp
+L Device:CP C1
+U 1 1 5DE8459A
+P 2250 1200
+F 0 "C1" H 2368 1246 50  0000 L CNN
+F 1 "680uF" H 2368 1155 50  0000 L CNN
+F 2 "" H 2288 1050 50  0001 C CNN
+F 3 "~" H 2250 1200 50  0001 C CNN
+	1    2250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5DE85A57
+P 2550 900
+F 0 "R13" V 2757 900 50  0000 C CNN
+F 1 "2k" V 2666 900 50  0000 C CNN
+F 2 "" V 2480 900 50  0001 C CNN
+F 3 "~" H 2550 900 50  0001 C CNN
+	1    2550 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5DE8A0BF
+P 2800 1500
+F 0 "R14" V 3007 1500 50  0000 C CNN
+F 1 "1k" V 2916 1500 50  0000 C CNN
+F 2 "" V 2730 1500 50  0001 C CNN
+F 3 "~" H 2800 1500 50  0001 C CNN
+	1    2800 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5DE9162F
+P 2000 1850
+F 0 "R16" V 1793 1850 50  0000 C CNN
+F 1 "50k" V 1884 1850 50  0000 C CNN
+F 2 "" V 1930 1850 50  0001 C CNN
+F 3 "~" H 2000 1850 50  0001 C CNN
+	1    2000 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J3
+U 1 1 5DEB34DE
+P 1500 2650
+F 0 "J3" H 1500 2900 50  0000 C CNN
+F 1 "RCA Black" H 1500 2800 50  0000 C CNN
+F 2 "" H 1500 2650 50  0001 C CNN
+F 3 " ~" H 1500 2650 50  0001 C CNN
+	1    1500 2650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2100 2600 2100
+$Comp
+L power:GND #PWR04
+U 1 1 5DECE00A
+P 1200 2950
+F 0 "#PWR04" H 1200 2700 50  0001 C CNN
+F 1 "GND" H 1205 2777 50  0000 C CNN
+F 2 "" H 1200 2950 50  0001 C CNN
+F 3 "" H 1200 2950 50  0001 C CNN
+	1    1200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1950 2400 1850
+Wire Wire Line
+	2400 1850 2150 1850
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5DE8E35F
+P 1500 1850
+F 0 "J2" H 1500 2100 50  0000 C CNN
+F 1 "RCA Red" H 1500 2000 50  0000 C CNN
+F 2 "" H 1500 1850 50  0001 C CNN
+F 3 " ~" H 1500 1850 50  0001 C CNN
+	1    1500 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1850 1850 1850
+$Comp
+L Device:R R17
+U 1 1 5DEB34E8
+P 2000 2650
+F 0 "R17" V 1800 2650 50  0000 C CNN
+F 1 "50k" V 1900 2650 50  0000 C CNN
+F 2 "" V 1930 2650 50  0001 C CNN
+F 3 "~" H 2000 2650 50  0001 C CNN
+	1    2000 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 2250 2400 2300
+Wire Wire Line
+	2400 2300 2250 2300
+Wire Wire Line
+	2250 2300 2250 2050
+Wire Wire Line
+	2250 2050 1500 2050
+Connection ~ 1500 2050
+Wire Wire Line
+	2400 2450 2400 2400
+$Comp
+L Device:R_POT_Dual RV1
+U 1 1 5DE989FB
+P 2500 2350
+F 0 "RV1" V 2450 2550 50  0000 C CNN
+F 1 "50k pot" V 2550 2550 50  0000 C CNN
+F 2 "" H 2750 2275 50  0001 C CNN
+F 3 "~" H 2750 2275 50  0001 C CNN
+	1    2500 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 2400 2250 2400
+Wire Wire Line
+	2250 2400 2250 2650
+Wire Wire Line
+	2250 2650 2150 2650
+Wire Wire Line
+	1850 2650 1700 2650
+Wire Wire Line
+	2400 2850 1500 2850
+Wire Wire Line
+	2400 2750 2400 2850
+Connection ~ 1500 2850
+$Comp
+L Device:R R15
+U 1 1 5DF0E920
+P 2750 3700
+F 0 "R15" V 2957 3700 50  0000 C CNN
+F 1 "1k" V 2866 3700 50  0000 C CNN
+F 2 "" V 2680 3700 50  0001 C CNN
+F 3 "~" H 2750 3700 50  0001 C CNN
+	1    2750 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 2100 2650 1500
+Wire Wire Line
+	1500 1400 2250 1400
+Wire Wire Line
+	1500 1100 1500 1400
+Wire Wire Line
+	1500 1400 1200 1400
+Connection ~ 1500 1400
+Wire Wire Line
+	2100 900  2250 900 
+Connection ~ 2250 900 
+Wire Wire Line
+	2250 900  2400 900 
+Wire Wire Line
+	1200 1400 1200 2050
+Wire Wire Line
+	1200 2950 1200 2850
+Connection ~ 1200 2850
+Wire Wire Line
+	1200 2850 1500 2850
+Wire Wire Line
+	1200 2050 1500 2050
+Connection ~ 1200 2050
+Wire Wire Line
+	1200 2050 1200 2850
+Wire Wire Line
+	2250 1050 2250 900 
+Wire Wire Line
+	2250 1350 2250 1400
+Wire Wire Line
+	2250 900  2250 550 
+$Comp
+L Connector:AudioJack2_Ground J4
+U 1 1 5E0136D3
+P 9200 2600
+F 0 "J4" H 9020 2618 50  0000 R CNN
+F 1 "Audio jack/Phone jack" H 9020 2527 50  0000 R CNN
+F 2 "" H 9200 2600 50  0001 C CNN
+F 3 "~" H 9200 2600 50  0001 C CNN
+	1    9200 2600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2050 8050 2150
+$Comp
+L power:GND #PWR02
+U 1 1 5E0104B8
+P 8050 2150
+F 0 "#PWR02" H 8050 1900 50  0001 C CNN
+F 1 "GND" H 8055 1977 50  0000 C CNN
+F 2 "" H 8050 2150 50  0001 C CNN
+F 3 "" H 8050 2150 50  0001 C CNN
+	1    8050 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 1700
+Wire Wire Line
+	8050 1700 8050 1750
+Wire Wire Line
+	7850 1700 8050 1700
+Wire Wire Line
+	7850 1700 7700 1700
+Wire Wire Line
+	7850 2150 7850 1700
+Wire Wire Line
+	7700 2150 7850 2150
+$Comp
+L Device:R R6
+U 1 1 5E00C091
+P 8050 1900
+F 0 "R6" H 8120 1946 50  0000 L CNN
+F 1 "2k" H 8120 1855 50  0000 L CNN
+F 2 "" V 7980 1900 50  0001 C CNN
+F 3 "~" H 8050 1900 50  0001 C CNN
+	1    8050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 1700 7400 1700
+Connection ~ 7250 1700
+Wire Wire Line
+	7250 2150 7400 2150
+Wire Wire Line
+	7250 1700 7250 2150
+Wire Wire Line
+	6500 1700 6500 1600
+Connection ~ 6500 1700
+Wire Wire Line
+	6500 1700 7250 1700
+Wire Wire Line
+	4550 2450 6500 2450
+$Comp
+L Device:CP C9
+U 1 1 5DFDC537
+P 7550 2150
+F 0 "C9" V 7805 2150 50  0000 C CNN
+F 1 "0.22uF 250V" V 7714 2150 50  0000 C CNN
+F 2 "" H 7588 2000 50  0001 C CNN
+F 3 "~" H 7550 2150 50  0001 C CNN
+	1    7550 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 5DFD80B0
+P 7550 1700
+F 0 "C3" V 7805 1700 50  0000 C CNN
+F 1 "470uF 63V" V 7714 1700 50  0000 C CNN
+F 2 "" H 7588 1550 50  0001 C CNN
+F 3 "~" H 7550 1700 50  0001 C CNN
+	1    7550 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 550  6500 1200
+Wire Wire Line
+	2250 550  6500 550 
+Wire Wire Line
+	5550 1400 5700 1400
+Connection ~ 5550 1400
+Wire Wire Line
+	5550 900  5550 1400
+$Comp
+L Device:R R2
+U 1 1 5DFCF850
+P 4850 900
+F 0 "R2" V 4643 900 50  0000 C CNN
+F 1 "330k" V 4734 900 50  0000 C CNN
+F 2 "" V 4780 900 50  0001 C CNN
+F 3 "~" H 4850 900 50  0001 C CNN
+	1    4850 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 1400 5550 1400
+Connection ~ 5400 1400
+Wire Wire Line
+	5400 1550 5400 1400
+$Comp
+L Device:R R4
+U 1 1 5DFC837F
+P 5400 1700
+F 0 "R4" H 5470 1746 50  0000 L CNN
+F 1 "180k" H 5470 1655 50  0000 L CNN
+F 2 "" V 5330 1700 50  0001 C CNN
+F 3 "~" H 5400 1700 50  0001 C CNN
+	1    5400 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2450 6500 1700
+Wire Wire Line
+	6000 1400 6200 1400
+Wire Wire Line
+	5250 1400 5400 1400
+$Comp
+L Device:R R3
+U 1 1 5DFBE9F9
+P 5850 1400
+F 0 "R3" V 5643 1400 50  0000 C CNN
+F 1 "2k" V 5734 1400 50  0000 C CNN
+F 2 "" V 5780 1400 50  0001 C CNN
+F 3 "~" H 5850 1400 50  0001 C CNN
+	1    5850 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:BUZ11 Q1
+U 1 1 5DF433DE
+P 6400 1400
+F 0 "Q1" H 6604 1446 50  0000 L CNN
+F 1 "IRF510" H 6604 1355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6650 1325 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BU/BUZ11.pdf" H 6400 1400 50  0001 L CNN
+	1    6400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5DFA6A0D
+P 5100 1400
+F 0 "C2" V 4848 1400 50  0000 C CNN
+F 1 "0.22uF 63V" V 4939 1400 50  0000 C CNN
+F 2 "" H 5138 1250 50  0001 C CNN
+F 3 "~" H 5100 1400 50  0001 C CNN
+	1    5100 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4900 1950 4800 1950
+Wire Wire Line
+	4900 2300 4900 2100
+Wire Wire Line
+	2700 900  3650 900 
+Wire Wire Line
+	4350 900  4350 1000
+$Comp
+L power:GND #PWR01
+U 1 1 5DF7669F
+P 5400 2150
+F 0 "#PWR01" H 5400 1900 50  0001 C CNN
+F 1 "GND" H 5405 1977 50  0000 C CNN
+F 2 "" H 5400 2150 50  0001 C CNN
+F 3 "" H 5400 2150 50  0001 C CNN
+	1    5400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5DF6C923
+P 4350 1150
+F 0 "R1" H 4420 1196 50  0000 L CNN
+F 1 "44k" H 4420 1105 50  0000 L CNN
+F 2 "" V 4280 1150 50  0001 C CNN
+F 3 "~" H 4350 1150 50  0001 C CNN
+	1    4350 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2400 3950 2400
+Wire Wire Line
+	3900 2700 4100 2700
+Connection ~ 3900 2700
+Wire Wire Line
+	3900 2800 3900 2700
+$Comp
+L power:GND #PWR03
+U 1 1 5DF51DEE
+P 3900 2800
+F 0 "#PWR03" H 3900 2550 50  0001 C CNN
+F 1 "GND" H 3905 2627 50  0000 C CNN
+F 2 "" H 3900 2800 50  0001 C CNN
+F 3 "" H 3900 2800 50  0001 C CNN
+	1    3900 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2700 3900 2700
+$Comp
+L Device:CP C7
+U 1 1 5DF4D6F9
+P 4100 2550
+F 0 "C7" H 4218 2596 50  0000 L CNN
+F 1 "220uF 16V" H 4218 2505 50  0000 L CNN
+F 2 "" H 4138 2400 50  0001 C CNN
+F 3 "~" H 4100 2550 50  0001 C CNN
+	1    4100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5DF4D05B
+P 3750 2550
+F 0 "R5" H 3820 2596 50  0000 L CNN
+F 1 "4k" H 3820 2505 50  0000 L CNN
+F 2 "" V 3680 2550 50  0001 C CNN
+F 3 "~" H 3750 2550 50  0001 C CNN
+	1    3750 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4300 8050 4400
+$Comp
+L power:GND #PWR08
+U 1 1 5E1EB021
+P 8050 4400
+F 0 "#PWR08" H 8050 4150 50  0001 C CNN
+F 1 "GND" H 8055 4227 50  0000 C CNN
+F 2 "" H 8050 4400 50  0001 C CNN
+F 3 "" H 8050 4400 50  0001 C CNN
+	1    8050 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 3950
+Wire Wire Line
+	8050 3950 8050 4000
+Wire Wire Line
+	7850 3950 8050 3950
+Wire Wire Line
+	7850 3950 7700 3950
+Wire Wire Line
+	7850 4400 7850 3950
+Wire Wire Line
+	7700 4400 7850 4400
+$Comp
+L Device:R R12
+U 1 1 5E1EB031
+P 8050 4150
+F 0 "R12" H 8120 4196 50  0000 L CNN
+F 1 "2k" H 8120 4105 50  0000 L CNN
+F 2 "" V 7980 4150 50  0001 C CNN
+F 3 "~" H 8050 4150 50  0001 C CNN
+	1    8050 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3950 7400 3950
+Connection ~ 7250 3950
+Wire Wire Line
+	7250 4400 7400 4400
+Wire Wire Line
+	7250 3950 7250 4400
+Wire Wire Line
+	6500 3950 6500 3800
+Wire Wire Line
+	6500 3950 7250 3950
+$Comp
+L Device:CP C10
+U 1 1 5E1EB044
+P 7550 4400
+F 0 "C10" V 7805 4400 50  0000 C CNN
+F 1 "0.22uF 250V" V 7714 4400 50  0000 C CNN
+F 2 "" H 7588 4250 50  0001 C CNN
+F 3 "~" H 7550 4400 50  0001 C CNN
+	1    7550 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP C5
+U 1 1 5E1EB04E
+P 7550 3950
+F 0 "C5" V 7805 3950 50  0000 C CNN
+F 1 "470uF 63V" V 7714 3950 50  0000 C CNN
+F 2 "" H 7588 3800 50  0001 C CNN
+F 3 "~" H 7550 3950 50  0001 C CNN
+	1    7550 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 3600 5700 3600
+Connection ~ 5550 3600
+Wire Wire Line
+	5550 3150 5550 3600
+$Comp
+L Device:R R8
+U 1 1 5E1EB060
+P 4850 3150
+F 0 "R8" V 4643 3150 50  0000 C CNN
+F 1 "330k" V 4734 3150 50  0000 C CNN
+F 2 "" V 4780 3150 50  0001 C CNN
+F 3 "~" H 4850 3150 50  0001 C CNN
+	1    4850 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 3600 5550 3600
+Connection ~ 5400 3600
+Wire Wire Line
+	5400 3800 5400 3600
+$Comp
+L Device:R R10
+U 1 1 5E1EB070
+P 5400 3950
+F 0 "R10" H 5470 3996 50  0000 L CNN
+F 1 "180k" H 5470 3905 50  0000 L CNN
+F 2 "" V 5330 3950 50  0001 C CNN
+F 3 "~" H 5400 3950 50  0001 C CNN
+	1    5400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3600 6200 3600
+Wire Wire Line
+	5200 3600 5400 3600
+$Comp
+L Device:R R9
+U 1 1 5E1EB07D
+P 5850 3600
+F 0 "R9" V 5643 3600 50  0000 C CNN
+F 1 "2k" V 5734 3600 50  0000 C CNN
+F 2 "" V 5780 3600 50  0001 C CNN
+F 3 "~" H 5850 3600 50  0001 C CNN
+	1    5850 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:BUZ11 Q2
+U 1 1 5E1EB087
+P 6400 3600
+F 0 "Q2" H 6604 3646 50  0000 L CNN
+F 1 "IRF510" H 6604 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6650 3525 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BU/BUZ11.pdf" H 6400 3600 50  0001 L CNN
+	1    6400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5E1EB094
+P 5050 3600
+F 0 "C4" V 4798 3600 50  0000 C CNN
+F 1 "0.22uF 63V" V 4889 3600 50  0000 C CNN
+F 2 "" H 5088 3450 50  0001 C CNN
+F 3 "~" H 5050 3600 50  0001 C CNN
+	1    5050 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5E1EB0B4
+P 5400 4350
+F 0 "#PWR07" H 5400 4100 50  0001 C CNN
+F 1 "GND" H 5405 4177 50  0000 C CNN
+F 2 "" H 5400 4350 50  0001 C CNN
+F 3 "" H 5400 4350 50  0001 C CNN
+	1    5400 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 4800
+Wire Wire Line
+	3650 4900 3650 4800
+$Comp
+L power:GND #PWR09
+U 1 1 5E1EB0CE
+P 3650 4900
+F 0 "#PWR09" H 3650 4650 50  0001 C CNN
+F 1 "GND" H 3655 4727 50  0000 C CNN
+F 2 "" H 3650 4900 50  0001 C CNN
+F 3 "" H 3650 4900 50  0001 C CNN
+	1    3650 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4800 3650 4800
+$Comp
+L Device:R R11
+U 1 1 5E1EB0E3
+P 3500 4650
+F 0 "R11" H 3570 4696 50  0000 L CNN
+F 1 "4k" H 3570 4605 50  0000 L CNN
+F 2 "" V 3430 4650 50  0001 C CNN
+F 3 "~" H 3500 4650 50  0001 C CNN
+	1    3500 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2600 2600 3700
+Wire Wire Line
+	4550 4700 6500 4700
+Wire Wire Line
+	6500 4700 6500 3950
+Connection ~ 6500 3950
+Wire Wire Line
+	6500 3400 6500 3200
+Wire Wire Line
+	7000 3200 7000 550 
+Wire Wire Line
+	7000 550  6500 550 
+Wire Wire Line
+	6500 3200 7000 3200
+Connection ~ 6500 550 
+$Comp
+L Device:CP C6
+U 1 1 5E31FD39
+P 3100 3050
+F 0 "C6" H 3218 3096 50  0000 L CNN
+F 1 "680uF 63V" H 3218 3005 50  0000 L CNN
+F 2 "" H 3138 2900 50  0001 C CNN
+F 3 "~" H 3100 3050 50  0001 C CNN
+	1    3100 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 900 
+Wire Wire Line
+	3650 900  4350 900 
+Wire Wire Line
+	3650 3150 3650 2750
+$Comp
+L power:GND #PWR06
+U 1 1 5E33C2AC
+P 3100 3250
+F 0 "#PWR06" H 3100 3000 50  0001 C CNN
+F 1 "GND" H 3105 3077 50  0000 C CNN
+F 2 "" H 3100 3250 50  0001 C CNN
+F 3 "" H 3100 3250 50  0001 C CNN
+	1    3100 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3200 3100 3250
+$Comp
+L power:GND #PWR05
+U 1 1 5E348823
+P 9200 2950
+F 0 "#PWR05" H 9200 2700 50  0001 C CNN
+F 1 "GND" H 9205 2777 50  0000 C CNN
+F 2 "" H 9200 2950 50  0001 C CNN
+F 3 "" H 9200 2950 50  0001 C CNN
+	1    9200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 2800 9200 2950
+Wire Wire Line
+	8050 3950 9000 3950
+Wire Wire Line
+	9000 3950 9000 2600
+Connection ~ 8050 3950
+Wire Wire Line
+	8050 1700 9000 1700
+Wire Wire Line
+	9000 1700 9000 2500
+Connection ~ 8050 1700
+Wire Wire Line
+	4350 900  4700 900 
+Connection ~ 4350 900 
+Wire Wire Line
+	5000 3150 5550 3150
+Wire Wire Line
+	5000 900  5550 900 
+$Comp
+L Valve:12SR7 V1
+U 1 1 5E5BAF51
+P 4500 1950
+F 0 "V1" H 4500 2317 50  0000 C CNN
+F 1 "12SR7" H 4500 2226 50  0000 C CNN
+F 2 "" H 4550 2450 50  0001 C CNN
+F 3 "http://www.r-type.org/pdfs/12sr7.pdf" H 4550 2450 50  0001 C CNN
+	1    4500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Valve:12SR7 V2
+U 1 1 5E5A52CE
+P 4500 4150
+F 0 "V2" H 4500 4517 50  0000 C CNN
+F 1 "12SR7" H 4500 4426 50  0000 C CNN
+F 2 "" H 4550 4650 50  0001 C CNN
+F 3 "http://www.r-type.org/pdfs/12sr7.pdf" H 4550 4650 50  0001 C CNN
+	1    4500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4800 3850 4800
+$Comp
+L Device:CP C8
+U 1 1 5E1EB0D9
+P 3850 4650
+F 0 "C8" H 3968 4696 50  0000 L CNN
+F 1 "220uF 16V" H 3968 4605 50  0000 L CNN
+F 2 "" H 3888 4500 50  0001 C CNN
+F 3 "~" H 3850 4650 50  0001 C CNN
+	1    3850 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3600 4900 3600
+Connection ~ 4350 3150
+Wire Wire Line
+	4350 3150 4700 3150
+Wire Wire Line
+	3650 3150 4350 3150
+Wire Wire Line
+	4350 3550 4350 3600
+Wire Wire Line
+	4350 3150 4350 3250
+$Comp
+L Device:R R7
+U 1 1 5E1EB0BE
+P 4350 3400
+F 0 "R7" H 4420 3446 50  0000 L CNN
+F 1 "44k" H 4420 3355 50  0000 L CNN
+F 2 "" V 4280 3400 50  0001 C CNN
+F 3 "~" H 4350 3400 50  0001 C CNN
+	1    4350 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4300 3700 4500
+Wire Wire Line
+	3700 4500 3500 4500
+Wire Wire Line
+	3700 4500 3850 4500
+Connection ~ 3700 4500
+Wire Wire Line
+	4800 4300 4900 4300
+Wire Wire Line
+	4900 4500 4900 4300
+Connection ~ 4900 4300
+Wire Wire Line
+	4800 4150 4900 4150
+Wire Wire Line
+	4900 4150 4900 4300
+Wire Wire Line
+	4450 4500 4450 4450
+Wire Wire Line
+	4200 4300 3700 4300
+Wire Wire Line
+	4100 4000 4100 3600
+Wire Wire Line
+	4100 3600 4350 3600
+Connection ~ 4350 3600
+Wire Wire Line
+	4550 4700 4550 4450
+Wire Wire Line
+	5400 4100 5400 4300
+Wire Wire Line
+	4450 4500 4900 4500
+Wire Wire Line
+	4200 4150 4100 4150
+Wire Wire Line
+	4100 4150 4100 4500
+Wire Wire Line
+	4100 4500 4450 4500
+Connection ~ 4450 4500
+Wire Wire Line
+	4900 3700 4900 4000
+Wire Wire Line
+	4900 4000 4800 4000
+Wire Wire Line
+	4100 4000 4200 4000
+Wire Wire Line
+	3950 2100 3950 2400
+Connection ~ 3950 2400
+Wire Wire Line
+	3950 2400 4100 2400
+Wire Wire Line
+	5400 1850 5400 2100
+Wire Wire Line
+	2950 1500 4900 1500
+Wire Wire Line
+	3950 2100 4200 2100
+Wire Wire Line
+	4100 2300 4100 1950
+Wire Wire Line
+	4100 1950 4200 1950
+Wire Wire Line
+	4100 1400 4350 1400
+Wire Wire Line
+	4350 1300 4350 1400
+Connection ~ 4350 1400
+Wire Wire Line
+	4350 1400 4950 1400
+Wire Wire Line
+	4800 2100 4900 2100
+Connection ~ 4900 2100
+Wire Wire Line
+	4900 2100 4900 1950
+Wire Wire Line
+	4900 4300 5400 4300
+Connection ~ 5400 4300
+Wire Wire Line
+	5400 4300 5400 4350
+Wire Wire Line
+	4900 2100 5400 2100
+Connection ~ 5400 2100
+Wire Wire Line
+	5400 2100 5400 2150
+Wire Wire Line
+	4100 2300 4450 2300
+Wire Wire Line
+	4550 2250 4550 2450
+Wire Wire Line
+	4450 2250 4450 2300
+Connection ~ 4450 2300
+Wire Wire Line
+	4450 2300 4900 2300
+Wire Wire Line
+	4900 1500 4900 1800
+Wire Wire Line
+	4900 1800 4800 1800
+Wire Wire Line
+	4100 1400 4100 1800
+Wire Wire Line
+	4100 1800 4200 1800
+Wire Wire Line
+	3100 2900 3100 2750
+Wire Wire Line
+	3100 2750 3650 2750
+Connection ~ 3650 2750
+Wire Wire Line
+	3650 2750 3650 900 
+Wire Wire Line
+	2900 3700 4900 3700
+Text Notes 600  7650 0    50   ~ 0
+Original modification details posted by Logistic on head-fi and incorporated into this diagram:\n--------------------------------------------------------------------------------\n...you have to make some small changes [by substituting the following resistors] -\n\nR1/R7  - 44k\nR5/R11 - 4K\nR2/R8  - 330K\nR4/R10 - 180K\n\nYou will have to use an octal socket, and here are the conversions from the seven pin socket in the original circuit diagram:\n\n1,2 -> 6\n5,6 -> 2\n3,4 -> 7,8\n7   -> 3\n\nYou will also have to ground pin 1 which is for the metal casing. It is probably a good idea to ground pin 1 with a separate\npath to ground from the heaters (pins 7,8). That way if the ground connection for the heaters breaks for whatever reason you\ndon't see that voltage on the tubes.\n\nUsing 2" heatsinks is also recommended since the heaters are running at 12V instead of 19V.\n\n-- https://www.head-fi.org/threads/millett-starving-student-hybrid-amp.319231/post-5584511
+Text Notes 7000 6450 0    62   ~ 0
+Tubes/valves that fit this design include:\n* 12SR7   - metal encased tube (cannot see heater)\n* 12SW7   - metal encased tube (cannot see heater)\n* 12SR7GT - glass encased tube
+Text Notes 600  750  0    50   ~ 0
+Power input:\n48V DC 350mA
+$EndSCHEMATC
