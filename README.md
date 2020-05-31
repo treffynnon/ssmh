@@ -9,7 +9,7 @@ This repository contains circuit schematics/diagrams for a variety of compatible
 
 ## Why?
 
-There is an amazing array of information out there on the Peter Millet designed Starving Student Hybrid headphone amplifier and various community modifications.
+There is an amazing array of information out there on the Peter Millet designed [Starving Student Hybrid headphone amplifier][pm-ssmh] and various community modifications.
 This project is an attempt to make it more easily accessible rather than requiring someone to delve into a forum thread many hundreds of pages deep.
 
 I have drafted schematics for the circuits based around the following valves:
@@ -29,14 +29,18 @@ Some of the valves share the same pin-outs, but others do not - where they do th
 So, for example the 12AX7 and 12AU7 have the same pin-out and power requirements so they are both included in `./KiCad schematics/SSMH_12A_7.pro`.
 The same goes for the 12S_7 variants too.
 
+[pm-ssmh]: http://pmillett.com/starving.htm
+
 ## KiCad
 
-The diagrams were created using the open source schematic editor, KiCad.
+The diagrams were created using the open source schematic editor, [KiCad][kicad].
 Whilst it can be a little complicated to learn (it doesn't take too long) it is a powerful circuit designer.
 
 To open the project start with the `SSMH.pro` file as it should open the project and all sub-projects in KiCad - see `./KiCad schematics`.
 
 You are then free to edit the schematic to add components or adjust values against existing components.
+
+[kicad]: https://kicad-pcb.org/
 
 ### Handy tips
 
